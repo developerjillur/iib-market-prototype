@@ -591,7 +591,10 @@ p{margin:0}
 .tbl .pc{display:flex;align-items:center;gap:12px;min-width:0}
 .tbl .pc img{width:48px;height:48px;border-radius:10px;object-fit:cover;background:var(--sweep);flex:none}
 .tbl-wrap{overflow-x:auto}
+/* .stack is also the vertical flex utility; a stacking table stays a table until the phone layout takes over */
+table.tbl.stack{display:table}
 @media (max-width:760px){
+  table.tbl.stack,.tbl.stack tbody{display:block}
   .tbl.stack thead{display:none}
   .tbl.stack tr{display:grid;grid-template-columns:1fr auto;gap:6px 12px;padding:14px;border-bottom:1px solid var(--line)}
   .tbl.stack td{padding:0;border:0}
